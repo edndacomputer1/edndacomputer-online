@@ -27,19 +27,19 @@ const Header = () => {
   return (
     <div>
       {/* Top */}
-      <div className="relative -z-10 h-60 w-full">
+      <div className=" h-80 relative  w-full -z-10">
         <img
           src="/images/image.jpg"
           alt="Background Image"
-          className="absolute h-full w-full object-cover opacity-60 blur-xl"
+          className=" h-full w-full object-cover blur-xl absolute opacity-40 pb-4"
         />
       </div>
-      <div className="relative -top-9 z-10 flex w-full justify-center">
-        <div className="absolute w-full rounded-full bg-[#111111] p-2">
+      <div className="w-full flex justify-center z-10 relative -top-9">
+        <div className="absolute  p-1 rounded-full bg-white bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-[length:400%_400%]  border-4 border-spacing-4 border-green-500 animate-border">
           <img
             src="/images/avatar-ed.png"
             alt="edndacomputer"
-            className="h-16 w-16 rounded-full object-cover"
+            className="h-20 w-20 rounded-full object-cover"
           />
         </div>
       </div>
