@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import React, { useState } from "react";
 import { BsFileText } from "react-icons/bs";
 import { FcCheckmark } from "react-icons/fc";
 import { PiCopy, PiGlobeSimpleThin, PiPhoneLight } from "react-icons/pi";
@@ -11,66 +11,65 @@ import { RiVerifiedBadgeFill } from "react-icons/ri";
 import LinksComponent from "./Links";
 
 const Main = () => {
-  const inviteUri = "edndacomputer@riseup.net";
+  const [copied, setCopied] = useState(false);
+  const inviteUrl = "edndacomputer@riseup.net";
 
   const onCopy = () => {
-    navigator.clipboard.writeText(inviteUri);
+    navigator.clipboard.writeText(inviteUrl);
     setCopied(true);
 
     setTimeout(() => {
       setCopied(false);
     }, 1000);
   };
-  const [copied, setCopied] = useState(false);
   return (
-    <div className="h-screen bg-[#111111] p-3">
-      <div className="mx-auto h-screen max-w-lg bg-[#111111] pt-14">
+    <div className='h-screen bg-[#111111] p-3'>
+      <div className='mx-auto h-screen max-w-lg bg-[#111111] pt-14'>
         <div>
-          <div className="items-center text-center">
-            <h3 className="flex items-center justify-center gap-x-2 font-Intermedium text-2xl text-white">
+          <div className='items-center text-center'>
+            <h3 className='flex items-center justify-center gap-x-2 font-Intermedium text-2xl text-white'>
               edndacomputer
-              <RiVerifiedBadgeFill className="text-xl text-[#B5924F]" />
+              <RiVerifiedBadgeFill className='text-xl text-[#B5924F]' />
             </h3>
-            <div className="mt-3 flex items-center justify-center gap-x-2 font-Interegular text-neutral-500">
+            <div className='mt-3 flex items-center justify-center gap-x-2 font-Interegular text-neutral-500'>
               <p>Est 1985</p>
-              <span className="h-[3px] w-[3px] rounded-full bg-neutral-600"></span>
+              <span className='h-[3px] w-[3px] rounded-full bg-neutral-600'></span>
               <p>Ventura, California</p>
-              <span className="h-[3px] w-[3px] rounded-full bg-neutral-600"></span>
+              <span className='h-[3px] w-[3px] rounded-full bg-neutral-600'></span>
               <p>He/Him</p>
-              <span className="h-[3px] w-[3px] rounded-full bg-neutral-600"></span>
+              <span className='h-[3px] w-[3px] rounded-full bg-neutral-600'></span>
             </div>
           </div>
-
+          Main
           <div>
-            <p className="my-3 text-center font-Intermedium text-neutral-500">
+            <p className='my-3 text-center font-Intermedium text-neutral-500'>
               edndacomputer is a software developer from Ventura, California.
             </p>
 
-            <div className="flex flex-col items-center justify-center gap-x-7 sm:flex-row">
+            <div className='flex flex-col items-center justify-center gap-x-7 sm:flex-row'>
               <Link
                 href={"https://wwww.edndacomputer.xyz"}
-                className="flex items-center gap-x-2 gap-y-4 rounded-xl p-1 px-2 transition-all duration-100 ease-in hover:bg-neutral-900"
+                className='flex items-center gap-x-2 gap-y-4 rounded-xl p-1 px-2 transition-all duration-100 ease-in hover:bg-neutral-900'
               >
-                <PiGlobeSimpleThin className="h-8 w-8 text-xl text-neutral-400" />
-                <p className="font-Intermedium text-white">edndacomputer.xyz</p>
+                <PiGlobeSimpleThin className='h-8 w-8 text-xl text-neutral-400' />
+                <p className='font-Intermedium text-white'>edndacomputer.xyz</p>
               </Link>
 
               <Link
-                href="tel:+18055858602"
-                className="flex cursor-pointer  items-center  gap-x-2 rounded-xl p-1 px-2 transition-all duration-100 ease-in hover:bg-neutral-900"
+                href='tel:+18055858602'
+                className='flex cursor-pointer  items-center  gap-x-2 rounded-xl p-1 px-2 transition-all duration-100 ease-in hover:bg-neutral-900'
               >
-                <PiPhoneLight className="h-8 w-8 text-xl text-neutral-400" />
-                <p className="font-Intermedium text-white">805 585-8602</p>
+                <PiPhoneLight className='h-8 w-8 text-xl text-neutral-400' />
+                <p className='font-Intermedium text-white'>805 585-8602</p>
               </Link>
             </div>
           </div>
-
-          <div className="my-6 flex items-center justify-center gap-x-2">
+          <div className='my-6 flex items-center justify-center gap-x-2'>
             <button
               onClick={onCopy}
-              className="flex h-10  w-80 items-center justify-center gap-x-3 rounded-lg bg-slate-50 transition-all duration-300 ease-in hover:bg-neutral-100"
+              className='flex h-10  w-80 items-center justify-center gap-x-3 rounded-lg bg-slate-50 transition-all duration-300 ease-in hover:bg-neutral-100'
             >
-              <span className="font-Intermedium ">
+              <span className='font-Intermedium '>
                 {copied ? "copied" : "edndacomputer@riseup.net"}
               </span>
 
@@ -86,7 +85,7 @@ const Main = () => {
                       damping: 100,
                     }}
                   >
-                    <FcCheckmark className="h-6 w-6 text-emerald-500 transition-all duration-500 ease-in" />
+                    <FcCheckmark className='h-6 w-6 text-emerald-500 transition-all duration-500 ease-in' />
                   </motion.span>
                 ) : (
                   <motion.span
@@ -99,29 +98,56 @@ const Main = () => {
                       damping: 10,
                     }}
                   >
-                    <PiCopy className="h-4 w-4" />
+                    <PiCopy className='h-4 w-4' />
                   </motion.span>
                 )}
               </AnimatePresence>
             </button>
           </div>
-
-          <div className="flex justify-center gap-x-5">
+          <div className='flex justify-center gap-x-5'>
             {/* <Stories stories={stories} /> */}
           </div>
-          <div className="mt-5">
+          <div className='mt-5'>
             <LinksComponent />
           </div>
-          <div className="mt-5">
-            <div className="flex h-40 w-full flex-row items-center justify-center">
-              <Link href="/ed-estrella-resume-2024.pdf" target="_blank" rel="noreferrer">
-                <button className="inline-block animate-border rounded-2xl bg-white bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-[length:400%_400%] p-1">
-                  <div className="flex items-center justify-center rounded-2xl bg-slate-900 px-5 py-3 font-bold text-white">
-                    <BsFileText className="h-10 w-10" />{" "}
-                    <span className="font-Intermedium">View Resume</span>
+          <div className='mt-5'>
+            <div className='flex h-40 w-full flex-row items-center justify-center'>
+              <Link
+                href='/ed-estrella-resume-2024.pdf'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <button className='inline-block animate-border rounded-2xl bg-white bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-[length:400%_400%] p-1'>
+                  <div className='flex items-center justify-center rounded-2xl bg-slate-900 px-5 py-3 font-bold text-white'>
+                    <BsFileText className='h-10 w-10' />{" "}
+                    <span className='font-Intermedium'>View Resume</span>
                   </div>
                 </button>
               </Link>
+            </div>
+            <div>
+              <div className='mt-8 flex justify-between gap-x-6 rounded-xl bg-[#161616]'>
+                <img
+                  src='/images/icons/sunglasses.svg'
+                  alt=''
+                  className='h-9 w-10 rounded-lg object-cover'
+                />
+              </div>
+              <div className='flex-1'>
+                <h4 className='text-center font-Interegular text-lg text-white md:text-left'>
+                  Mega
+                </h4>
+                <p className='hidden font-Interegular text-sm text-neutral-500 md:block'>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Maecenas eros magna, laoreet sed ipsum ac, ultricies ultrices
+                  elit. Integer efficitur pretium ipsum ac fermentum. Fusce
+                  finibus malesuada ligula, sed aliquam nunc congue id. Fusce
+                  facilisis.{" "}
+                </p>
+                <div className='first-letter-hidden mt-3 h-7 w-full items-center justify-center rounded-md border border-neutral-800 px-2 font-Interegular text-sm uppercase text-white md:flex'>
+                  Store
+                </div>
+              </div>
             </div>
           </div>
         </div>
