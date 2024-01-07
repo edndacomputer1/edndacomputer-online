@@ -4,9 +4,9 @@ function Footer() {
   return (
     <div>
       <div className="mt-6 flex w-full flex-col  items-center justify-center p-3 ">
-        <div className="text-neutral-500">
+        <div className="font-Interegular text-neutral-500">
           <span>© {new Date().getFullYear()}</span>
-          <span>Portfolio by @edndacomputer</span>
+          <span> Portfolio by @edndacomputer</span>
         </div>
         <div className="mt-3 flex items-center gap-x-4 text-white">
           <p className="cursor-pointer transition-all duration-200 ease-in hover:text-neutral-700">
