@@ -1,16 +1,15 @@
-import Link from 'next/link';
-import React from 'react';
-
+import React from "react";
+import Link from "next/link";
 import {
-  BsGithub,
-  BsTwitterX,
   BsDiscord,
-  BsYoutube,
+  BsGithub,
   BsLinkedin,
   BsSpotify,
-} from 'react-icons/bs';
+  BsTwitterX,
+  BsYoutube,
+} from "react-icons/bs";
 
-function LinksComponent() {
+const LinksComponent = () => {
   return (
     <div className="mx-auto mt-8 flex flex-wrap justify-center gap-5">
       <Link href="http://www.github.com/edndacomputer1">
@@ -31,7 +30,7 @@ function LinksComponent() {
           <span className="sr-only">Icon description</span>
         </button>
       </Link>
-      <Link href="#">
+      <Link href="https://www.discord.com">
         <button
           type="button"
           className="me-2 inline-flex items-center rounded-lg bg-[#5865F2] p-2.5 text-center text-sm font-medium text-white hover:bg-[#5865F2]/80 focus:outline-none focus:ring-4 focus:ring-white"
@@ -40,7 +39,7 @@ function LinksComponent() {
           <span className="sr-only">Icon description</span>
         </button>
       </Link>
-      <Link href="#">
+      <Link href="https://www.youtube.com">
         <button
           type="button"
           className="me-2 inline-flex items-center rounded-lg bg-[#FF0000] p-2.5 text-center text-sm font-medium text-[#FFFFFF] hover:bg-[#FF0000]/80 focus:outline-none focus:ring-4 focus:ring-[#FFFFFF]"
@@ -69,6 +68,6 @@ function LinksComponent() {
       </Link>
     </div>
   );
-}
+};
 
 export default LinksComponent;

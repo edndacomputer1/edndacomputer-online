@@ -1,18 +1,23 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+import React from "react";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] });
+import "./globals.css";
 
-export const metadata: Metadata = {
-  title: 'edndacomputer',
-  description: 'a blog about computers',
-};
+import Footer from "@/app/components/Footer";
+
+import Header from "./components/Header";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header />
+
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
