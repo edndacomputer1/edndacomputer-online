@@ -23,8 +23,8 @@ const Main = () => {
     }, 1000);
   };
   return (
-    <div className='h-screen bg-[#111111] p-3'>
-      <div className='mx-auto h-screen max-w-lg bg-[#111111] pt-14'>
+    <div className='bg-[#111111] p-3'>
+      <div className='mx-auto max-w-lg bg-[#111111] pt-14'>
         <div>
           <div className='items-center text-center'>
             <h3 className='flex items-center justify-center gap-x-2 font-Intermedium text-2xl text-white'>
@@ -124,30 +124,6 @@ const Main = () => {
                   </div>
                 </button>
               </Link>
-            </div>
-            <div>
-              <div className='mt-8 flex justify-between gap-x-6 rounded-xl bg-[#161616]'>
-                <img
-                  src='/images/icons/sunglasses.svg'
-                  alt=''
-                  className='h-9 w-10 rounded-lg object-cover'
-                />
-              </div>
-              <div className='flex-1'>
-                <h4 className='text-center font-Interegular text-lg text-white md:text-left'>
-                  Mega
-                </h4>
-                <p className='hidden font-Interegular text-sm text-neutral-500 md:block'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Maecenas eros magna, laoreet sed ipsum ac, ultricies ultrices
-                  elit. Integer efficitur pretium ipsum ac fermentum. Fusce
-                  finibus malesuada ligula, sed aliquam nunc congue id. Fusce
-                  facilisis.{" "}
-                </p>
-                <div className='first-letter-hidden mt-3 h-7 w-full items-center justify-center rounded-md border border-neutral-800 px-2 font-Interegular text-sm uppercase text-white md:flex'>
-                  Store
-                </div>
-              </div>
             </div>
           </div>
         </div>

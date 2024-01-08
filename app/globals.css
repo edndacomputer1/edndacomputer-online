@@ -1,143 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-  font-family: Interegular;
-  src: url("../public//font//Interegular.otf");
-}
-@font-face {
-  font-family: Interlight;
-  src: url("../public//font//Interlight.otf");
-}
-@font-face {
-  font-family: Intermedium;
-  src: url("../public//font//Intermedium.otf");
-}
-
+ 
 @layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+ 
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+ 
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+ 
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+ 
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+ 
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+ 
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+ 
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
   body {
-    @apply bg-[#111111]  transition-all duration-200 ease-in;
-  }
-}
-
-:root {
-  --width: 640px;
-  --animation-timing: 4s;
-  --primary: #118ab2;
-  --white: #fff;
-
-  --button-size: 40px;
-}
-
-/* img {
-  vertical-align: middle;
-} */
-
-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-/* .thumbnail span {
-  display: block;
-  margin-top: 10px;
-  font-weight: 700;
-} */
-
-.close {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 101;
-}
-
-.close svg {
-  fill: var(--white);
-  height: 40px;
-  width: 40px;
-}
-
-.indicator {
-  display: block;
-  width: 100%;
-  height: 2px;
-  border-radius: 12px;
-  background: #ccc;
-  position: relative;
-  overflow: hidden;
-}
-
-.indicator.active {
-  transition: transform 1s ease;
-}
-
-.indicator.complete {
-  background: var(--primary);
-}
-
-.indicator.active::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: rgb(150, 150, 150);
-  animation: fill var(--animation-timing) ease;
-}
-
-@keyframes fill {
-  from {
-    transform: translateX(-100%);
-  }
-
-  to {
-    transform: translateX(0%);
-  }
-}
-
-/* .slide {
-  min-height: 550px;
-  position: relative;
-} */
-
-/* .user-info span {
-  color: var(--white);
-  font-weight: 700;
-} */
-
-.prev-next {
-  position: absolute;
-  top: calc(50% - var(--button-size) / 2);
-  left: 5px;
-  right: 5px;
-}
-
-.prev-next button {
-  position: absolute;
-  background: var(--white);
-  height: var(--button-size);
-  width: var(--button-size);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0.7;
-}
-
-.prev-next button:first-child {
-  left: 0;
-}
-
-.prev-next button:last-child {
-  right: 0;
-}
-
-/* Slight repositioning of the elements on mobile */
-@media screen and (min-width: 520px) {
-  .prev-next {
-    left: -50px;
-    right: -50px;
+    @apply bg-background text-foreground;
   }
 }
