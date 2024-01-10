@@ -4,7 +4,7 @@ import { PiArrowSquareOutThin } from "react-icons/pi";
 
 const MainCards = () => {
   return (
-    <div>
+    <div className='max-w-lg w-full mx-auto bg-[#111111]'>
       <div className=' bg-[#161616] gap-x-6 p-3 rounded-xl mt-8 flex justify-between '>
         <Image
           width={800}
@@ -15,7 +15,7 @@ const MainCards = () => {
         />
         <div className='flex-1  '>
           <h4 className='font-Interegular text-white text-lg text-center md:text-left'>
-            Ultra
+            Resume
           </h4>
           <p className='font-Interegular text-sm text-neutral-500 hidden md:block'>
             A high quality Framer portfolio template <br /> designed for

@@ -3,7 +3,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import React, { useState } from "react";
-import { BsFileText } from "react-icons/bs";
 import { FcCheckmark } from "react-icons/fc";
 import { PiCopy, PiGlobeSimpleThin, PiPhoneLight } from "react-icons/pi";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
@@ -109,22 +108,6 @@ const Main = () => {
           </div>
           <div className='mt-5'>
             <LinksComponent />
-          </div>
-          <div className='mt-5'>
-            <div className='flex h-40 w-full flex-row items-center justify-center'>
-              <Link
-                href='/ed-estrella-resume-2024.pdf'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <button className='inline-block animate-border rounded-2xl bg-white bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-[length:400%_400%] p-1'>
-                  <div className='flex items-center justify-center rounded-2xl bg-slate-900 px-5 py-3 font-bold text-white'>
-                    <BsFileText className='h-10 w-10' />{" "}
-                    <span className='font-Intermedium'>View Resume</span>
-                  </div>
-                </button>
-              </Link>
-            </div>
           </div>
         </div>
       </div>
