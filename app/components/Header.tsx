@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div>
       {/* Top */}
-      <div className=' relative -z-10  h-60 w-full'>
+      <div className='relative -z-10  h-60 w-full'>
         <img
           src='/images/image.jpg'
           alt='Background'
