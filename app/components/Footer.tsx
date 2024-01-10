@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div>
+    <div className='bg-[#111111]'>
       <div className='mt-6 flex w-full flex-col  items-center justify-center p-3 '>
         <div className='font-Interegular text-neutral-500'>
           <span>© {new Date().getFullYear()}</span>

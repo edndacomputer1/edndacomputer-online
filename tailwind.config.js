@@ -1,13 +1,49 @@
+// /** @type {import('tailwindcss').Config} */
+// module.exports = {
+//   content: [
+//     "./pages/**/*.{js,ts,jsx,tsx}",
+//     "./components/**/*.{js,ts,jsx,tsx}",
+//     "./app/**/*.{js,ts,jsx,tsx}",
+//   ],
+//   theme: {
+//     extend: {
+//       animation: {
+//         scroll:
+//           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+//       },
+//       keyframes: {
+//         scroll: {
+//           to: {
+//             transform: "translate(calc(-50% - 0.5rem))",
+//           },
+//         },
+//       },
+//     },
+
+// fontFamily: {
+//   Interegular: "Interegular",
+//   Interlight: "Interlight",
+//   Intermedium: "Intermedium",
+// },
+//   },
+// plugins: [
+//   addVariablesForColors, // required for using colors like var(--gray-200)
+// ],
+// };
+
+const { fontFamily } = require("tailwindcss/defaultTheme");
+const defaultTheme = require("tailwindcss/defaultTheme");
+
+const colors = require("tailwindcss/colors");
+const svgToDataUri = require("mini-svg-data-uri");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
-  prefix: "",
+  content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
   theme: {
     container: {
       center: true,
@@ -17,6 +53,11 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        Interegular: "Interegular",
+        Interlight: "Interlight",
+        Intermedium: "Intermedium",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -32,8 +73,8 @@ module.exports = {
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: "hsl(var(--destructive) / <alpha-value>)",
+          foreground: "hsl(var(--destructive-foreground) / <alpha-value>)",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -53,9 +94,17 @@ module.exports = {
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
+        xl: `calc(var(--radius) + 4px)`,
+        lg: `var(--radius)`,
+        md: `calc(var(--radius) - 2px)`,
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        // mono: ["var(--font-mono)", ...fontFamily.mono],
+        Interegular: "Interegular",
+        Interlight: "Interlight",
+        Intermedium: "Intermedium",
       },
       keyframes: {
         "accordion-down": {
@@ -73,5 +122,15 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), "addVariablesForColors"],
 };
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
