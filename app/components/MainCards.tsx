@@ -10,7 +10,7 @@ const MainCards = () => {
           width={800}
           height={800}
           className='w-10 h-9 rounded-lg object-cover'
-          src='/images/f.jpg'
+          src='/images/icons/document.svg'
           alt=''
         />
         <div className='flex-1  '>
@@ -40,11 +40,11 @@ const MainCards = () => {
           width={800}
           height={800}
           className='w-10 h-9 rounded-lg object-cover'
-          src='/images/cry.jpg'
+          src='/images/icons/cloud.svg'
           alt=''
         />
 
-        <div className='flex-1  '>
+        <div className='flex-1'>
           <h4 className='font-Interegular text-white text-lg text-center md:text-left'>
             Grainy Gradients
           </h4>
@@ -68,7 +68,7 @@ const MainCards = () => {
           width={800}
           height={800}
           className='w-10 h-9 rounded-lg object-cover'
-          src='/images/yellow.jpg'
+          src='/images/icons/user.svg'
           alt=''
         />
         <div className='flex-1'>
