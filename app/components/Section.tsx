@@ -1,13 +1,13 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import React, { useState } from "react";
 import { FcCheckmark } from "react-icons/fc";
-import { PiCopy, PiGlobeSimpleThin, PiPhoneLight } from "react-icons/pi";
+import { PiCopy } from "react-icons/pi";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 
 import LinksComponent from "./Links";
+import FrontPageContact from "./FrontPageContact";
 
 const Main = () => {
   const [copied, setCopied] = useState(false);
@@ -45,21 +45,7 @@ const Main = () => {
               edndacomputer is a software developer from Ventura, California.
             </p>
 
-            <div className="flex flex-col items-center justify-center gap-x-7 sm:flex-row">
-              <Link
-                href={"https://wwww.edndacomputer.xyz"}
-                className="flex items-center gap-x-2 gap-y-4 rounded-xl p-1 px-2 transition-all duration-100 ease-in hover:bg-neutral-900">
-                <PiGlobeSimpleThin className="h-8 w-8 text-xl text-neutral-400" />
-                <p className="font-Intermedium text-white">edndacomputer.xyz</p>
-              </Link>
-
-              <Link
-                href="tel:+18055858602"
-                className="flex cursor-pointer  items-center  gap-x-2 rounded-xl p-1 px-2 transition-all duration-100 ease-in hover:bg-neutral-900">
-                <PiPhoneLight className="h-8 w-8 text-xl text-neutral-400" />
-                <p className="font-Intermedium text-white">805 585-8602</p>
-              </Link>
-            </div>
+            <FrontPageContact />
           </div>
           <div className="my-6 flex items-center justify-center gap-x-2">
             <button

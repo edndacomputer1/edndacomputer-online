@@ -6,6 +6,11 @@ import Footer from "@/app/components/Footer";
 
 import Header from "./components/Header";
 
+export const metadata = {
+  title: "My portfolio",
+  description: "Get to kno more about me",
+};
+
 export default function RootLayout({
   children,
 }: {

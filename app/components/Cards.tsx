@@ -1,36 +1,49 @@
+/* eslint-disable */
 import React from "react";
 import { Button } from "@/app/components/ui/button";
-import { HiArrowTopRightOnSquare } from "react-icons/hi2";
+import { PiArrowSquareOutThin } from "react-icons/pi";
 import {
   Card,
   CardTitle,
-  CardContent,
+  CardLabel,
   CardDescription,
   CardCategory,
 } from "@/app/components/ui/long-card";
-import { BsFileText } from "react-icons/bs";
+import Image from "next/image";
 
-const Cards = () => {
+const CardComponent = ({
+  title,
+  description,
+  iconSrc,
+  iconAlt,
+  category,
+  onButtonClick,
+  buttonLabel,
+}) => {
   return (
-    <div className="mx-auto h-screen w-full max-w-lg bg-[#111111]">
+    <div className="mx-auto w-full max-w-lg bg-[#111111]">
       <Card>
-        <BsFileText className="h-10 w-10" />
-        <CardContent>
-          <CardTitle>Rrésumé</CardTitle>
-          <CardDescription>
-            A high quality Framer portfolio template <br /> designed for
-            creatives.
-          </CardDescription>
+        <Image
+          width={800}
+          height={800}
+          className="h-9 w-10 rounded-lg object-cover"
+          src={iconSrc}
+          alt={iconAlt}
+        />
+        <div className="flex-1">
+          <CardTitle>{title}</CardTitle>
+          <CardDescription>{description}</CardDescription>
 
-          <CardCategory>Store</CardCategory>
-        </CardContent>
-        <Button className="gap-x-2 bg-neutral-800 font-Intermedium text-white">
-          View
-          <HiArrowTopRightOnSquare />
+          <CardCategory>{category}</CardCategory>
+        </div>
+
+        <Button variant={"icon"}>
+          <CardLabel>{buttonLabel}</CardLabel>
+          <PiArrowSquareOutThin />
         </Button>
       </Card>
     </div>
   );
 };
 
-export default Cards;
+export default CardComponent;

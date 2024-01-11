@@ -9,7 +9,7 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "mt-8 flex flex-row items-start justify-between gap-x-6 rounded-xl bg-[#161616] p-3",
+      "mt-8 flex justify-between gap-x-6 rounded-xl bg-[#161616] p-3",
       className,
     )}
     {...props}
@@ -36,7 +36,7 @@ const CardTitle = React.forwardRef<
   <h4
     ref={ref}
     className={cn(
-      "flex w-full items-center text-center font-Interegular text-lg text-white md:text-left",
+      "text-center font-Interegular text-lg text-white md:text-left",
       className,
     )}
     {...props}
@@ -86,6 +86,18 @@ const CardContent = React.forwardRef<
 ));
 CardContent.displayName = "CardContent";
 
+const CardLabel = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <span
+    ref={ref}
+    className={cn("hidden font-Intermedium text-xs md:block", className)}
+    {...props}
+  />
+));
+CardLabel.displayName = "CardLabel";
+
 const CardFooter = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -102,4 +114,5 @@ export {
   CardDescription,
   CardContent,
   CardCategory,
+  CardLabel,
 };

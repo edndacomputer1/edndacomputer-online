@@ -10,7 +10,7 @@
   },
   "parserOptions": {
     "ecmaVersion": 11,
-    "sourceType": null,
+    "sourceType": "module",
     "ecmaFeatures": {
       "arrowFunctions": true,
       "blockBindings": true,

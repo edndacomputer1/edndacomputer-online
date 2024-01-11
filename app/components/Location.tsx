@@ -10,7 +10,7 @@ function Location() {
   const path = usePathname();
 
   return (
-    <div>
+    <section className="mx-auto w-full max-w-lg">
       <div className="mt-3 rounded-xl bg-[#161616] p-2 ">
         <div className=" flex  justify-between gap-x-6">
           <div className="flex w-full items-center justify-between p-2">
@@ -39,7 +39,7 @@ function Location() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
