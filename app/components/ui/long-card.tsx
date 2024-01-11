@@ -9,8 +9,8 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "bg-[#161616] gap-x-6 p-3 rounded-xl mt-8 flex flex-row justify-between items-start",
-      className
+      "mt-8 flex flex-row items-start justify-between gap-x-6 rounded-xl bg-[#161616] p-3",
+      className,
     )}
     {...props}
   />
@@ -36,8 +36,8 @@ const CardTitle = React.forwardRef<
   <h4
     ref={ref}
     className={cn(
-      "font-Interegular w-full items-center text-white text-lg flex text-center md:text-left",
-      className
+      "flex w-full items-center text-center font-Interegular text-lg text-white md:text-left",
+      className,
     )}
     {...props}
   />
@@ -51,8 +51,8 @@ const CardDescription = React.forwardRef<
   <p
     ref={ref}
     className={cn(
-      "font-Interegular text-sm text-neutral-500 hidden md:block",
-      className
+      "hidden font-Interegular text-sm text-neutral-500 md:block",
+      className,
     )}
     {...props}
   />
@@ -66,8 +66,8 @@ const CardCategory = React.forwardRef<
   <p
     ref={ref}
     className={cn(
-      "uppercase border border-neutral-800 h-7 w-fit px-2 justify-center text-xs font-Interegular items-center rounded-md text-white mt-3 hidden md:flex",
-      className
+      "mt-3 hidden h-7 w-fit items-center justify-center rounded-md border border-neutral-800 px-2 font-Interegular text-xs uppercase text-white md:flex",
+      className,
     )}
     {...props}
   />
@@ -80,7 +80,7 @@ const CardContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex-1 flex flex-col justify-between w-full", className)}
+    className={cn("flex w-full flex-1 flex-col justify-between", className)}
     {...props}
   />
 ));
@@ -90,7 +90,7 @@ const CardFooter = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("text-white gap-x-2 ", className)} {...props} />
+  <div ref={ref} className={cn("gap-x-2 text-white ", className)} {...props} />
 ));
 CardFooter.displayName = "CardFooter";
 

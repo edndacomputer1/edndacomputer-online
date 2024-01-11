@@ -12,9 +12,9 @@ import { BsFileText } from "react-icons/bs";
 
 const Cards = () => {
   return (
-    <div className='mx-auto h-screen max-w-lg w-full bg-[#111111]'>
+    <div className="mx-auto h-screen w-full max-w-lg bg-[#111111]">
       <Card>
-        <BsFileText className='h-10 w-10' />
+        <BsFileText className="h-10 w-10" />
         <CardContent>
           <CardTitle>Rrésumé</CardTitle>
           <CardDescription>
@@ -24,7 +24,7 @@ const Cards = () => {
 
           <CardCategory>Store</CardCategory>
         </CardContent>
-        <Button className='text-white gap-x-2 bg-neutral-800 font-Intermedium'>
+        <Button className="gap-x-2 bg-neutral-800 font-Intermedium text-white">
           View
           <HiArrowTopRightOnSquare />
         </Button>

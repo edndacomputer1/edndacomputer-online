@@ -2,8 +2,23 @@
   "extends": ["next", "next/core-web-vitals", "prettier"],
   "plugins": ["prettier"],
   "rules": {
+    "@next/next/no-img-vars": "off",
     "no-console": "warn",
     "no-use-before-define": "error",
-    "no-unused-vars": "error"
-  }
+    "no-unused-vars": "error",
+    "prettier/prettier": ["warn"]
+  },
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": null,
+    "ecmaFeatures": {
+      "arrowFunctions": true,
+      "blockBindings": true,
+      "jsx": true,
+      "modules": true,
+      "objectLiteralDuplicateProperties": true,
+      "spread": true
+    }
+  },
+  "root": false
 }

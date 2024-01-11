@@ -12,11 +12,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
-      <body className='flex flex-col min-h-screen'>
+    <html lang="en">
+      <body className="flex min-h-screen flex-col">
         <Header />
         {children}
-        <footer className='mt-auto'>
+        <footer className="mt-auto">
           <Footer />
         </footer>
       </body>

@@ -81,7 +81,7 @@
 
 @layer base {
   body {
-    @apply bg-[#111111]  transition-all ease-in duration-200;
+    @apply bg-[#111111]  transition-all duration-200 ease-in;
   }
 }
 
