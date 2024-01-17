@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import { PiArrowSquareOutThin } from "react-icons/pi";
+import Link from "next/link";
 
 const MainCards = () => {
   return (
-    <div className="mx-auto w-full max-w-lg bg-[#111111]">
-      <div className=" mt-8 flex justify-between gap-x-6 rounded-xl bg-[#161616] p-3 ">
+    <div className="mx-auto w-full max-w-lg bg-card">
+      <div className=" mt-8 flex justify-between gap-x-6 rounded-xl bg-card-foreground p-3 ">
         <Image
           width={800}
           height={800}
@@ -13,7 +14,7 @@ const MainCards = () => {
           src="/images/icons/document.svg"
           alt=""
         />
-        <div className="flex-1  ">
+        <div className="flex-1">
           <h4 className="text-center font-Interegular text-lg text-white md:text-left">
             Resume
           </h4>
@@ -27,12 +28,14 @@ const MainCards = () => {
           </div>
         </div>
 
-        <button className="flex h-fit items-center gap-x-2 rounded-lg bg-neutral-800 p-2 text-white">
-          <span className="hidden font-Intermedium text-xs md:block ">
-            View
-          </span>
-          <PiArrowSquareOutThin />
-        </button>
+        <Link href="./ed-estrella-resume-2024.pdf" target="_blank">
+          <button className="flex h-fit items-center gap-x-2 rounded-lg bg-neutral-800 p-2 text-white">
+            <span className="hidden font-Intermedium text-xs md:block ">
+              View
+            </span>
+            <PiArrowSquareOutThin />
+          </button>
+        </Link>
       </div>
 
       <div className=" mt-3 flex justify-between gap-x-6 rounded-xl bg-[#161616] p-3 ">

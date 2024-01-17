@@ -7,7 +7,7 @@ import LatestPosts from "./components/LatestPosts";
 
 export default function Home() {
   return (
-    <div className="bg-[#111111]">
+    <div className="">
       <Main />
 
       <MainCards />

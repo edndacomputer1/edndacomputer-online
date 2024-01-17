@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "tailwind.config.js"
-  ],
+, "app/components/Cards.jsx"  ],
   "exclude": ["node_modules"]
 }
