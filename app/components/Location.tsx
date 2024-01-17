@@ -31,11 +31,8 @@ function Location() {
             width={1000}
             height={1000}
             className="h-full w-full rounded-2xl object-cover"
-            // src="/images/mapp.webp"
-            src={
-              path === "/youtuber" ? "/images/mappp.webp" : "/images/mapp.webp"
-            }
-            alt=""
+            src="/images/location.png"
+            alt="Location"
           />
         </div>
       </div>
